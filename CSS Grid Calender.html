@@ -1,0 +1,151 @@
+<html>
+<head>
+
+<style id="webmakerstyle">
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+/* Grid CSS Calender ========================================================================== */
+.cmp__calender {
+  max-width: 500px;
+  width: 100%;
+  margin: 5% auto;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+.org__calender {
+  border: 1px solid #ccc;
+  font-size: calc(.6rem + 1vw);
+  color: #444; }
+  .org__calender h1 {
+    text-align: center; }
+  .org__calender .org__days {
+    padding: 5px 0 20px; }
+  .org__calender .mod__week, .org__calender .mod__days {
+    display: grid;
+    grid-template-columns: calc(100% / 7) 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 10px 0px; }
+    .org__calender .mod__week .a__week, .org__calender .mod__week .a__day, .org__calender .mod__days .a__week, .org__calender .mod__days .a__day {
+      justify-self: center;
+      padding: .5rem; }
+      .org__calender .mod__week .a__week:nth-child(6n), .org__calender .mod__week .a__day:nth-child(6n), .org__calender .mod__days .a__week:nth-child(6n), .org__calender .mod__days .a__day:nth-child(6n) {
+        color: #00d; }
+      .org__calender .mod__week .a__week:nth-child(7n), .org__calender .mod__week .a__day:nth-child(7n), .org__calender .mod__days .a__week:nth-child(7n), .org__calender .mod__days .a__day:nth-child(7n) {
+        color: #d00; }
+    .org__calender .mod__week .a__day, .org__calender .mod__days .a__day {
+      position: relative;
+      width: calc(1rem + 1vw);
+      height: calc(1rem + 1vw);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      background-color: #f6f6f6;
+      padding: 10px;
+      transition: .2s; }
+      .org__calender .mod__week .a__day:hover, .org__calender .mod__days .a__day:hover {
+        cursor: pointer;
+        padding: 12px;
+        border: 1px solid #cecece;
+        border-radius: 50%;
+        background-color: #fff;
+        font-size: calc(1.2rem + 1.2vw); }
+        .org__calender .mod__week .a__day:hover.has__mtg::after, .org__calender .mod__days .a__day:hover.has__mtg::after {
+          position: absolute;
+          top: calc(100% + 3px);
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) rotate(360deg);
+          content: "";
+          border-radius: 0;
+          width: 80%;
+          height: 2px; }
+      .org__calender .mod__week .a__day.has__mtg::after, .org__calender .mod__days .a__day.has__mtg::after {
+        position: absolute;
+        top: 6px;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) rotate(0deg);
+        content: "";
+        background-color: #f00;
+        border-radius: 100%;
+        width: 4px;
+        height: 4px;
+        transition: .5s; }
+  .org__calender .mod__week {
+    margin: 10px 0;
+    border-bottom: 1px solid #ccc; }
+  .org__calender .mod__days {
+    height: calc(2.2rem + 1.8vw); }
+
+</style>
+</head>
+<body>
+<!-- Grid CSS Calender ========================================================================== -->
+<div class="cmp__calender">
+ <div class="org__calender">
+  <h1>Calender CSS Grid<br><span>2017/07</span></h1>
+
+  <div class="mod__week">
+   <div class="a__week">Mon</div>
+   <div class="a__week">Tue</div>
+   <div class="a__week">Wed</div>
+   <div class="a__week">Thu</div>
+   <div class="a__week">Fri</div>
+   <div class="a__week">Sat</div>
+   <div class="a__week">Sun</div>
+  </div>
+
+  <div class="org__days">
+   <div class="mod__days">
+    <div class="a__day">1</div>
+    <div class="a__day">2</div>
+    <div class="a__day has__mtg">3</div>
+    <div class="a__day">4</div>
+    <div class="a__day has__mtg">5</div>
+    <div class="a__day">6</div>
+    <div class="a__day">7</div>
+   </div>
+   <div class="mod__days">
+    <div class="a__day has__mtg">8</div>
+    <div class="a__day">9</div>
+    <div class="a__day has__mtg">10</div>
+    <div class="a__day">11</div>
+    <div class="a__day">12</div>
+    <div class="a__day">13</div>
+    <div class="a__day has__mtg">14</div>
+   </div>
+   <div class="mod__days">
+    <div class="a__day">15</div>
+    <div class="a__day has__mtg">16</div>
+    <div class="a__day">17</div>
+    <div class="a__day">18</div>
+    <div class="a__day has__mtg">19</div>
+    <div class="a__day">20</div>
+    <div class="a__day">21</div>
+   </div>
+   <div class="mod__days">
+    <div class="a__day">22</div>
+    <div class="a__day">23</div>
+    <div class="a__day has__mtg">24</div>
+    <div class="a__day has__mtg">25</div>
+    <div class="a__day">26</div>
+    <div class="a__day">27</div>
+    <div class="a__day">28</div>
+   </div>
+   <div class="mod__days">
+    <div class="a__day has__mtg">29</div>
+    <div class="a__day has__mtg">30</div>
+    <div class="a__day">31</div>
+    <div class="a__day"></div>
+    <div class="a__day"></div>
+    <div class="a__day"></div>
+    <div class="a__day"></div>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<script src="chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/lib/screenlog.js"></script><script src="filesystem:chrome-extension://lkfkkhfhhdkiemehlpkgjeojomhpccnh/temporary/script.js">
+</script>
+</body>
+</html>
